@@ -1,0 +1,52 @@
+from distutils.command.build_scripts import first_line_re
+
+
+answer=int(input('피보나치 수열의 형식으로 알고 싶은 수를 입력하세요: '))
+
+time_of_0=0
+time_of_1=0
+first_again==0
+second_again==0
+
+
+
+def piponachi(answer):
+    if answer==0:
+        print('answer가 0이므로 0만이 한번만 출력되네요')
+        time_of_0+=1
+    elif answer==1:
+        print('answer가 1이므로 1만이 한번만 출력되네요')
+        time_of_1+=1
+    else :
+        pibonachi_general(answer-1)+pibonachi_general(answer-2)
+       
+
+        return (pibonachi_general(answer-1)+pibonachi_general(answer-1))
+        
+
+def pibonachi_general(int):
+    while(int<0):
+        if int==0:
+            int-=1
+            num_of_0+=1
+        elif int==1:
+            int-=2
+            num_of_1+=1
+        else:
+            return (pibonachi_general(int-1)+pibonachi_general(int-2))
+        
+
+piponachi(answer)
+# def pibonachi_general(int):
+#     while int!=
+#     if int==0:
+#         time_of_0+=1
+#     elif int==1:
+#         time_of_1+=1
+#     else :
+#         return pibonachi_general(int-1)+pibonachi_general(int-2)
+
+
+
+
+print(answer,'에 대한 피보나치 수열의 분석은 0이',time_of_0,'회 , 1이', time_of_1,'회 입니다')
